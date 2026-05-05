@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* COVER */
+        .cover {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* TEKS */
+        .judul {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        .sub {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        /* BUTTON */
+        button {
+            background: white;
+            color: #1976d2;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        /* ANIMASI */
+        .fade1, .fade2, .fade3 {
+            opacity: 0;
+        }
+
+        .fade1 {
+            animation: muncul 1.5s ease forwards;
+        }
+
+        .fade2 {
+            animation: muncul 1.5s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        .fade3 {
+            animation: muncul 1.5s ease forwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ANIMASI GERAK MAJU MUNDUR */
+        .tombol-animasi {
+            opacity: 0;
+            animation: munculGoyang 1s ease forwards, goyang 3s ease-in-out infinite;
+            animation-delay: 2s, 3s;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .tombol-animasi:hover {
+            transform: scale(1.1);
+        }
+
+        .tombol-animasi:active {
+            transform: scale(0.85);
+        }
+
+        @keyframes munculGoyang {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes goyang {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <h1 class="judul fade1">E-Book Interaktif</h1>
+        <p class="sub fade2">
+            Pembelajaran Bahasa Indonesia<br>  
+            Kelas V SD<br>  
+            Materi Teks Aural
+        </p>
+        <button id="btnMulai" class="tombol-animasi">
+            Mulai Belajar
+        </button>
+    </div>
+
+    <!-- AUDIO KLIK -->
+    <audio id="soundKlik" src="klik.mp3" preload="auto">
+
+    <script>
+        var btn = document.getElementById("btnMulai");
+        var audio = document.getElementById("soundKlik");
+
+        btn.addEventListener("click", function() {
+            audio.currentTime = 0;
+            audio.play()
+                .then(function() {
+                    setTimeout(function() {
+                        window.location.href = "halaman2.html";
+                    }, 500);
+                })
+                .catch(function() {
+                    window.location.href = "halaman2.html";
+                });
+        });
+    </script>
+</body>
+</html>
+

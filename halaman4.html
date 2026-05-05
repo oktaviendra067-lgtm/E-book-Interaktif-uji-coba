@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 2: Ciri & Jenis Teks Aural - E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(25, 118, 210, 0.85), rgba(25, 118, 210, 0.85)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .kontainer {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.96);
+            color: #333;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: muncul 1s ease forwards;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1976d2;
+        }
+
+        h2 {
+            color: #1565c0;
+            font-size: 22px;
+            margin: 25px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #1976d2;
+        }
+
+        h3 {
+            color: #1976d2;
+            font-size: 18px;
+            margin:15px 0 8px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 10px 0 15px 25px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .kotak-ciri {
+            background-color: #e8f0fe;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #1976d2;
+        }
+
+        .daftar-jenis {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin:20px 0;
+        }
+
+        .kartu-jenis {
+            background-color: #f5f5f5;
+            padding:20px;
+            border-radius:10px;
+            border-top:4px solid #1976d2;
+            box-shadow:0 3px 8px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .kartu-jenis:hover {
+            transform: translateY(-5px);
+            box-shadow:0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        .tombol-suara {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 8px 0;
+        }
+
+        .tombol-suara:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        .tombol-navigasi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        @media (min-width:700px){
+            .daftar-jenis{
+                grid-template-columns:1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tombol-navigasi {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Bab 2: Ciri & Jenis Teks Aural Non Fiksi</h1>
+
+        <h2>2.1 Ciri-Ciri Teks Aural Non Fiksi</h2>
+
+        <div class="kotak-ciri">
+            <p>Teks aural yang bersifat non fiksi memiliki ciri khas yang membedakannya dengan jenis teks lainnya. Berikut adalah ciri-cirinya:</p>
+        </div>
+
+        <ul>
+            <li><strong>Isinya berupa fakta atau informasi nyata</strong><br>
+                Semua hal yang disampaikan adalah kejadian yang benar-benar terjadi, pengetahuan, atau keterangan yang sahih. Bukan rekayasa atau khayalan pengarangnya.</li>
+            <li><strong>Bahasa yang digunakan jelas, baku, dan mudah dipahami</strong><br>
+                Kalimat yang digunakan teratur, tidak berbelit-belit, dan menggunakan kata-kata yang umum atau sesuai dengan topik pembicaraannya.</li>
+            <li><strong>Memiliki struktur yang teratur</strong><br>
+                Penyampaiannya disusun mulai dari pembukaan, isi, hingga penutup sehingga pendengar mudah mengerti alur informasinya.</li>
+            <li><strong>Penyampaiannya menggunakan intonasi dan penekanan makna</strong><br>
+                Cara bicara, nada suara, dan penekanan pada kata-kata penting membantu pendengar menangkap arti dan maksud dari informasi yang disampaikan.</li>
+        </ul>
+
+        <button class="tombol-suara" id="suaraCiri">🔊 Dengarkan Penjelasan</button>
+
+
+        <h2>2.2 Jenis-Jenis Teks Aural Non Fiksi</h2>
+
+        <p>Teks aural non fiksi memiliki berbagai jenis yang sering kita temui dalam kehidupan sehari-hari. Berikut adalah jenis-jenisnya beserta penjelasannya:</p>
+
+        <div class="daftar-jenis">
+            <!-- Kartu Jenis 1 -->
+            <div class="kartu-jenis">
+                <h3>📢 Berita</h3>
+                <p>Teks yang berisi laporan tentang peristiwa atau kejadian baru yang benar-benar terjadi di lingkungan sekitar maupun di tempat lain. Tujuannya untuk menyampaikan informasi kepada masyarakat luas.</p>
+                <p><strong>Contoh:</strong> Pembacaan berita di radio atau televisi, pengumuman di sekolah.</p>
+                <button class="tombol-suara" id="suaraBerita">🔊 Contoh Suara</button>
+            </div>
+
+            <!-- Kartu Jenis 2 -->
+            <div class="kartu-jenis">
+                <h3>🗣️ Pidato</h3>
+                <p>Ungkapan gagasan, pendapat, atau pikiran seseorang yang disampaikan di depan umum dengan tujuan tertentu. Biasanya berisi ajakan, sambutan, atau penyampaian gagasan penting.</p>
+                <p><strong>Contoh:</strong> Pidato upacara bendera, sambutan kepala sekolah, ceramah.</p>
+                <button class="tombol-suara" id="suaraPidato">🔊 Contoh Suara</button>
+            </div>
+
+            <!-- Kartu Jenis 3 -->
+            <div class="kartu-jenis">
+                <h3>📝 Penjelasan / Instruksi</h3>
+                <p>Teks yang berisi uraian atau langkah-langkah untuk melakukan sesuatu, menjelaskan cara kerja alat, atau menerangkan sebab-akibat suatu peristiwa. Tujuannya agar pendengar paham dan bisa melaksanakannya.</p>
+                <p><strong>Contoh:</strong> Penjelasan guru di kelas, petunjuk arah, cara membuat sesuatu.</p>
+                <button class="tombol-suara" id="suaraInstruksi">🔊 Contoh Suara</button>
+            </div>
+
+            <!-- Kartu Jenis 4 -->
+            <div class="kartu-jenis">
+                <h3>📑 Laporan</h3>
+                <p>Penyampaian hasil pengamatan, kegiatan, atau pekerjaan yang telah dilakukan. Laporan berisi fakta apa adanya sesuai dengan apa yang dilihat atau dialami.</p>
+                <p><strong>Contoh:</strong> Laporan ketua kelas, laporan hasil kunjungan, laporan kerja kelompok.</p>
+                <button class="tombol-suara" id="suaraLaporan">🔊 Contoh Suara</button>
+            </div>
+
+            <!-- Kartu Jenis 5 -->
+            <div class="kartu-jenis">
+                <h3>🎤 Wawancara</h3>
+                <p>Percakapan tanya jawab antara dua orang atau lebih untuk mendapatkan informasi atau keterangan mengenai suatu hal. Isinya berdasarkan jawaban asli dari narasumber.</p>
+                <p><strong>Contoh:</strong> Wawancara penyiar radio dengan tokoh, tanya jawab dalam acara diskusi.</p>
+                <button class="tombol-suara" id="suaraWawancara">🔊 Contoh Suara</button>
+            </div>
+        </div>
+
+
+        <div class="tombol-navigasi">
+            <button id="btnKembali">« Sebelumnya</button>
+            <button id="btnLanjut">Selanjutnya »</button>
+        </div>
+    </div>
+
+    <!-- Berkas Suara -->
+    <audio id="suaraKlik" src="klik.mp3" preload="auto">
+    <audio id="audioCiri" src="penjelasan_ciri.mp3" preload="auto">
+    <audio id="audioBerita" src="contoh_berita.mp3" preload="auto">
+    <audio id="audioPidato" src="contoh_pidato.mp3" preload="auto">
+    <audio id="audioInstruksi" src="contoh_instruksi.mp3" preload="auto">
+    <audio id="audioLaporan" src="contoh_laporan.mp3" preload="auto">
+    <audio id="audioWawancara" src="contoh_wawancara.mp3" preload="auto">
+
+    <script>
+        // Ambil elemen
+        const tombolKembali = document.getElementById('btnKembali');
+        const tombolLanjut = document.getElementById('btnLanjut');
+        const suaraKlik = document.getElementById('suaraKlik');
+
+        // Audio Penjelasan
+        const btnSuaraCiri = document.getElementById('suaraCiri');
+        const audioCiri = document.getElementById('audioCiri');
+
+        // Audio Contoh Jenis
+        const btnSuaraBerita = document.getElementById('suaraBerita');
+        const audioBerita = document.getElementById('audioBerita');
+
+        const btnSuaraPidato = document.getElementById('suaraPidato');
+        const audioPidato = document.getElementById('audioPidato');
+
+        const btnSuaraInstruksi = document.getElementById('suaraInstruksi');
+        const audioInstruksi = document.getElementById('audioInstruksi');
+
+        const btnSuaraLaporan = document.getElementById('suaraLaporan');
+        const audioLaporan = document.getElementById('audioLaporan');
+
+        const btnSuaraWawancara = document.getElementById('suaraWawancara');
+        const audioWawancara = document.getElementById('audioWawancara');
+
+
+        // Fungsi navigasi halaman
+        function pindahHalaman(tujuan) {
+            suaraKlik.currentTime = 0;
+            suaraKlik.play()
+                .then(() => {
+                    setTimeout(() => {
+                        window.location.href = tujuan;
+                    }, 400);
+                })
+                .catch(() => {
+                    window.location.href = tujuan;
+                });
+        }
+
+        // Fungsi putar suara (berhenti yang lain dulu)
+        function putarSuara(audioElemen) {
+            // Hentikan semua suara
+            audioCiri.pause(); audioCiri.currentTime = 0;
+            audioBerita.pause(); audioBerita.currentTime = 0;
+            audioPidato.pause(); audioPidato.currentTime = 0;
+            audioInstruksi.pause(); audioInstruksi.currentTime = 0;
+            audioLaporan.pause(); audioLaporan.currentTime = 0;
+            audioWawancara.pause(); audioWawancara.currentTime = 0;
+
+            // Putar suara yang dipilih
+            audioElemen.currentTime = 0;
+            audioElemen.play()
+                .catch(() => {
+                    alert("Maaf, berkas suara belum tersedia atau tidak dapat diputar!");
+                });
+        }
+
+        // Event Tombol Navigasi
+        tombolKembali.addEventListener('click', () => {
+            pindahHalaman('halaman3.html');
+        });
+
+        tombolLanjut.addEventListener('click', () => {
+            pindahHalaman('halaman5.html'); // Menuju Bab 3
+        });
+
+        // Event Tombol Suara
+        btnSuaraCiri.addEventListener('click', () => putarSuara(audioCiri));
+        btnSuaraBerita.addEventListener('click', () => putarSuara(audioBerita));
+        btnSuaraPidato.addEventListener('click', () => putarSuara(audioPidato));
+        btnSuaraInstruksi.addEventListener('click', () => putarSuara(audioInstruksi));
+        btnSuaraLaporan.addEventListener('click', () => putarSuara(audioLaporan));
+        btnSuaraWawancara.addEventListener('click', () => putarSuara(audioWawancara));
+    </script>
+</body>
+</html>

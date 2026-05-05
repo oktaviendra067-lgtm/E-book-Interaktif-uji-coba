@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 4: Contoh Lengkap Teks Aural - E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(25, 118, 210, 0.85), rgba(25, 118, 210, 0.85)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .kontainer {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.96);
+            color: #333;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: muncul 1s ease forwards;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1976d2;
+        }
+
+        h2 {
+            color: #1565c0;
+            font-size: 22px;
+            margin: 25px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #1976d2;
+        }
+
+        h3 {
+            color: #1976d2;
+            font-size: 18px;
+            margin: 15px 0 8px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .kartu-contoh {
+            background-color: #f9fafc;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #1976d2;
+            transition: 0.3s;
+        }
+
+        .kartu-contoh:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .judul-contoh {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #e3f2fd;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .isi-teks {
+            background-color: #ffffff;
+            border-left: 4px solid #90caf9;
+            padding: 18px;
+            margin: 12px 0;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.8;
+        }
+
+        .bagian-teks {
+            margin: 10px 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .bagian-pembukaan {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1565c0;
+        }
+
+        .bagian-isi {
+            background-color: #fff3e0;
+            border-left: 4px solid #fb8c00;
+        }
+
+        .bagian-penutup {
+            background-color: #e8f5e9;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .label-bagian {
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 4px;
+            display: inline-block;
+        }
+
+        /* Gaya Tombol Media */
+        .grup-tombol {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .tombol-suara, .tombol-video {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .tombol-suara {
+            background-color: #4caf50;
+        }
+        .tombol-suara:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        .tombol-video {
+            background-color: #f44336;
+        }
+        .tombol-video:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        /* Gaya Tampilan Video */
+        .wadah-video {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none; /* Awalnya disembunyikan */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Gaya Tombol Navigasi */
+        .tombol-navigasi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button.navigasi {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        button.navigasi:hover {
+            background-color: #1565c0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button.navigasi:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .tombol-navigasi {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Bab 4: Contoh Lengkap Teks Aural Non Fiksi</h1>
+
+        <p>Berikut adalah tiga contoh lengkap teks aural non fiksi beserta analisis strukturnya. Kamu bisa mendengarkan suaranya maupun menonton videonya agar pemahamanmu semakin lengkap.</p>
+
+
+        <!-- CONTOH 1: BERITA -->
+        <div class="kartu-contoh">
+            <div class="judul-contoh">
+                <h3>📢 Contoh 1: Teks Berita</h3>
+            </div>
+
+            <p><strong>Judul Berita: Kerja Bakti Membersihkan Lingkungan Sekolah</strong></p>
+
+            <div class="isi-teks">
+                <div class="bagian-teks bagian-pembukaan">
+                    <span class="label-bagian">📌 Bagian Pembukaan</span>
+                    <p>Selamat pagi pendengar! Berita terbaru dari lingkungan sekolah kita. Pada hari Minggu lalu, seluruh warga Sekolah Dasar Negeri 1 Teladan mengadakan kegiatan kerja bakti membersihkan lingkungan sekolah. Kegiatan ini dihadiri oleh kepala sekolah, guru, karyawan, serta siswa-siswi kelas 4 dan kelas 5.</p>
+                </div>
+
+                <div class="bagian-teks bagian-isi">
+                    <span class="label-bagian">📌 Bagian Isi</span>
+                    <p>Kegiatan dimulai pukul 07.30 pagi dengan pembukaan singkat dari Kepala Sekolah. Dalam sambutannya, beliau mengajak seluruh warga sekolah untuk selalu menjaga kebersihan lingkungan agar tercipta suasana belajar yang nyaman dan sehat. Setelah pembukaan, peserta dibagi menjadi beberapa kelompok sesuai tugasnya. Ada yang menyapu halaman, memotong rumput liar, membersihkan selokan, dan mengecat pagar sekolah.</p>
+                    <p>Semua peserta bekerja dengan semangat dan gotong royong. Tidak ada yang mengeluh meskipun cuaca cukup terik. Berkat kerja sama semua pihak, lingkungan sekolah menjadi bersih, rapi, dan indah kembali. Kegiatan ini diakhiri dengan makan siang bersama yang disediakan oleh komite sekolah.</p>
+                </div>
+
+                <div class="bagian-teks bagian-penutup">
+                    <span class="label-bagian">📌 Bagian Penutup</span>
+                    <p>Diharapkan kegiatan seperti ini dapat dilaksanakan secara rutin agar kesadaran menjaga kebersihan semakin tumbuh di hati seluruh warga sekolah. Demikian berita ini kami sampaikan. Terima kasih atas perhatiannya dan selamat pagi.</p>
+                </div>
+            </div>
+
+            <div class="grup-tombol">
+                <button class="tombol-suara" id="suaraBerita">🔊 Dengarkan Rekaman</button>
+                <button class="tombol-video" id="tombolVideo1">▶️ Tonton Video</button>
+            </div>
+
+            <!-- Tampilan Video -->
+            <div class="wadah-video" id="wadahVideo1">
+                <video id="video1" controls preload="none">
+                    <source src="video_berita.mp4" type="video/mp4">
+                    Peramban Anda tidak mendukung pemutaran video.
+                </video>
+            </div>
+        </div>
+
+
+        <!-- CONTOH 2: PENJELASAN -->
+        <div class="kartu-contoh">
+            <div class="judul-contoh">
+                <h3>📝 Contoh 2: Teks Penjelasan / Instruksi</h3>
+            </div>
+
+            <p><strong>Judul: Cara Menanam Tanaman Cabai di Pot</strong></p>
+
+            <div class="isi-teks">
+                <div class="bagian-teks bagian-pembukaan">
+                    <span class="label-bagian">📌 Bagian Pembukaan</span>
+                    <p>Halo teman-teman! Apakah kalian suka makan sambal? Pasti ya kan. Bahan utama sambal adalah cabai. Tahukah kalian? Kita bisa menanam cabai sendiri di rumah lho, bahkan hanya menggunakan pot saja. Caranya mudah dan bahannya sederhana. Mari kita simak langkah-langkahnya bersama-sama.</p>
+                </div>
+
+                <div class="bagian-teks bagian-isi">
+                    <span class="label-bagian">📌 Bagian Isi</span>
+                    <p>Langkah pertama adalah menyiapkan alat dan bahannya. Kalian membutuhkan bibit cabai, tanah yang subur, pupuk kandang, pot atau wadah bekas, dan air secukupnya. Pastikan pot yang digunakan memiliki lubang di bagian bawah agar air dapat mengalir keluar.</p>
+                    <p>Langkah kedua, campurkan tanah dengan pupuk kandang secukupnya. Aduk hingga rata, lalu masukkan ke dalam pot hingga penuh sekitar 80 persen saja. Selanjutnya, buat lubang kecil di tengah tanah, masukkan bibit cabai, lalu tutup kembali dengan tanah secara perlahan. Terakhir, siram tanaman dengan air secukupnya, jangan terlalu banyak agar akar tidak membusuk.</p>
+                    <p>Letakkan pot di tempat yang terkena sinar matahari. Siram tanaman setiap pagi dan sore hari. Jangan lupa membersihkan rumput liar yang tumbuh di sekitarnya. Jika dirawat dengan baik, dalam waktu sekitar 3 bulan, tanaman cabai kalian sudah mulai berbuah.</p>
+                </div>
+
+                <div class="bagian-teks bagian-penutup">
+                    <span class="label-bagian">📌 Bagian Penutup</span>
+                    <p>Sangat mudah bukan? Selain menyenangkan, menanam tanaman di rumah juga membantu menjaga lingkungan tetap hijau dan asri. Ayo dicoba di rumah masing-masing ya! Terima kasih dan selamat mencoba.</p>
+                </div>
+            </div>
+
+            <div class="grup-tombol">
+                <button class="tombol-suara" id="suaraPenjelasan">🔊 Dengarkan Rekaman</button>
+                <button class="tombol-video" id="tombolVideo2">▶️ Tonton Video</button>
+            </div>
+
+            <!-- Tampilan Video -->
+            <div class="wadah-video" id="wadahVideo2">
+                <video id="video2" controls preload="none">
+                    <source src="video_penjelasan.mp4" type="video/mp4">
+                    Peramban Anda tidak mendukung pemutaran video.
+                </video>
+            </div>
+        </div>
+
+
+        <!-- CONTOH 3: LAPORAN -->
+        <div class="kartu-contoh">
+            <div class="judul-contoh">
+                <h3>📑 Contoh 3: Teks Laporan Kegiatan</h3>
+            </div>
+
+            <p><strong>Judul: Laporan Kunjungan ke Museum Pendidikan</strong></p>
+
+            <div class="isi-teks">
+                <div class="bagian-teks bagian-pembukaan">
+                    <span class="label-bagian">📌 Bagian Pembukaan</span>
+                    <p>Assalamualaikum warahmatullahi wabarakatuh. Yang terhormat Bapak/Ibu Guru serta teman-teman sekalian. Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas berkat dan rahmat-Nya, kami dapat melaksanakan kegiatan kunjungan belajar ke Museum Pendidikan dengan lancar dan aman. Berikut kami sampaikan laporan kegiatannya.</p>
+                </div>
+
+                <div class="bagian-teks bagian-isi">
+                    <span class="label-bagian">📌 Bagian Isi</span>
+                    <p>Kunjungan ini dilaksanakan pada hari Selasa, 20 Mei 2026. Pesertanya adalah seluruh siswa kelas 5 SD Negeri 1 Teladan yang berjumlah 40 orang dan didampingi oleh 4 orang guru. Kegiatan berangkat dari sekolah pukul 08.00 pagi dan tiba di lokasi pukul 09.00 pagi.</p>
+                    <p>Di sana, kami disambut oleh pemandu yang ramah dan berpengalaman. Pemandu mengajak kami berkeliling melihat berbagai koleksi benda bersejarah, alat pendidikan zaman dulu, serta foto-foto perjuangan tokoh bangsa. Kami juga diajak masuk ke ruang simulasi kelas zaman dahulu. Rasanya sangat unik dan seru sekali.</p>
+                    <p>Selama kegiatan berlangsung, seluruh siswa tertib, antusias, dan banyak bertanya kepada pemandu. Banyak hal baru yang kami pelajari di sana, terutama tentang sejarah pendidikan di Indonesia dan perjuangan para pahlawan dalam mencerdaskan kehidupan bangsa. Kami pulang ke sekolah pukul 12.00 siang dengan membawa banyak ilmu dan pengalaman berharga.</p>
+                </div>
+
+                <div class="bagian-teks bagian-penutup">
+                    <span class="label-bagian">📌 Bagian Penutup</span>
+                    <p>Demikian laporan kegiatan kunjungan kami buat sebagai pertanggungjawaban dan informasi kepada semua pihak. Semoga laporan ini bermanfaat dan menjadi referensi untuk kegiatan di masa mendatang. Apabila ada kesalahan atau kekurangan, kami mohon maaf. Terima kasih atas perhatiannya. Wassalamualaikum warahmatullahi wabarakatuh.</p>
+                </div>
+            </div>
+
+            <div class="grup-tombol">
+                <button class="tombol-suara" id="suaraLaporan">🔊 Dengarkan Rekaman</button>
+                <button class="tombol-video" id="tombolVideo3">▶️ Tonton Video</button>
+            </div>
+
+            <!-- Tampilan Video -->
+            <div class="wadah-video" id="wadahVideo3">
+                <video id="video3" controls preload="none">
+                    <source src="video_laporan.mp4" type="video/mp4">
+                    Peramban Anda tidak mendukung pemutaran video.
+                </video>
+            </div>
+        </div>
+
+
+        <!-- TOMBOL NAVIGASI HALAMAN -->
+        <div class="tombol-navigasi">
+            <button class="navigasi" id="btnKembali">« Sebelumnya</button>
+            <button class="navigasi" id="btnLanjut">Selanjutnya »</button>
+        </div>
+
+    </div>
+
+    <!-- Berkas Suara -->
+    <audio id="suaraKlik" src="klik.mp3" preload="auto">
+    <audio id="audioBerita" src="contoh_berita.mp3" preload="auto">
+    <audio id="audioPenjelasan" src="contoh_penjelasan.mp3" preload="auto">
+    <audio id="audioLaporan" src="contoh_laporan.mp3" preload="auto">
+
+    <script>
+        // Ambil elemen
+        const tombolKembali = document.getElementById('btnKembali');
+        const tombolLanjut = document.getElementById('btnLanjut');
+        const suaraKlik = document.getElementById('suaraKlik');
+
+        // Elemen Suara & Video Contoh 1
+        const btnSuaraBerita = document.getElementById('suaraBerita');
+        const audioBerita = document.getElementById('audioBerita');
+        const btnVideo1 = document.getElementById('tombolVideo1');
+        const wadahVideo1 = document.getElementById('wadahVideo1');
+        const video1 = document.getElementById('video1');
+
+        // Elemen Suara & Video Contoh 2
+        const btnSuaraPenjelasan = document.getElementById('suaraPenjelasan');
+        const audioPenjelasan = document.getElementById('audioPenjelasan');
+        const btnVideo2 = document.getElementById('tombolVideo2');
+        const wadahVideo2 = document.getElementById('wadahVideo2');
+        const video2 = document.getElementById('video2');
+
+        // Elemen Suara & Video Contoh 3
+        const btnSuaraLaporan = document.getElementById('suaraLaporan');
+        const audioLaporan = document.getElementById('audioLaporan');
+        const btnVideo3 = document.getElementById('tombolVideo3');
+        const wadahVideo3 = document.getElementById('wadahVideo3');
+        const video3 = document.getElementById('video3');
+
+
+        // Fungsi Navigasi Halaman
+        function pindahHalaman(tujuan) {
+            suaraKlik.currentTime = 0;
+            suaraKlik.play()
+                .then(() => {
+                    setTimeout(() => {
+                        window.location.href = tujuan;
+                    }, 400);
+                })
+                .catch(() => {
+                    window.location.href = tujuan;
+                });
+        }
+
+        // Fungsi Hentikan Semua Media
+        function hentikanSemuaMedia() {
+            // Hentikan Suara
+            audioBerita.pause(); audioBerita.currentTime = 0;
+            audioPenjelasan.pause(); audioPenjelasan.currentTime = 0;
+            audioLaporan.pause(); audioLaporan.currentTime = 0;
+
+            // Hentikan & Sembunyikan Video
+            video1.pause(); video1.currentTime = 0;
+            video2.pause(); video2.currentTime = 0;
+            video3.pause(); video3.currentTime = 0;
+
+            wadahVideo1.style.display = 'none';
+            wadahVideo2.style.display = 'none';
+            wadahVideo3.style.display = 'none';
+        }
+
+        // Event Tombol Navigasi
+        tombolKembali.addEventListener('click', () => {
+            pindahHalaman('halaman5.html'); // Kembali ke Bab 3
+        });
+
+        tombolLanjut.addEventListener('click', () => {
+            pindahHalaman('halaman7.html'); // Menuju Bab 5: Latihan Soal
+        });
+
+        // Event Tombol Suara
+        btnSuaraBerita.addEventListener('click', () => {
+            hentikanSemuaMedia();
+            audioBerita.play().catch(() => {
+                alert("Berkas suara belum tersedia!");
+            });
+        });
+
+        btnSuaraPenjelasan.addEventListener('click', () => {
+            hentikanSemuaMedia();
+            audioPenjelasan.play().catch(() => {
+                alert("Berkas suara belum tersedia!");
+            });
+        });
+
+        btnSuaraLaporan.addEventListener('click', () => {
+            hentikanSemuaMedia();
+            audioLaporan.play().catch(() => {
+                alert("Berkas suara belum tersedia!");
+            });
+        });
+
+        // Event Tombol Video
+        btnVideo1.addEventListener('click', () => {
+            hentikanSemuaMedia();
+            wadahVideo1.style.display = 'block';
+            video1.play().catch(() => {
+                alert("Berkas video belum tersedia!");
+            });
+        });
+
+        btnVideo2.addEventListener('click', () => {
+            hentikanSemuaMedia();
+            wadahVideo2.style.display = 'block';
+            video2.play().catch(() => {
+                alert("Berkas video belum tersedia!");
+            });
+        });
+
+        btnVideo3.addEventListener('click', () => {
+            hentikanSemuaMedia();
+            wadahVideo3.style.display = 'block';
+            video3.play().catch(() => {
+                alert("Berkas video belum tersedia!");
+            });
+        });
+
+    </script>
+
+</body>
+</html>

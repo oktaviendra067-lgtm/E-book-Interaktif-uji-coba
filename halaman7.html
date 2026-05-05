@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 5: Latihan Soal - E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(25, 118, 210, 0.85), rgba(25, 118, 210, 0.85)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .kontainer {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.96);
+            color: #333;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: muncul 1s ease forwards;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1976d2;
+        }
+
+        h2 {
+            color: #1565c0;
+            font-size: 22px;
+            margin: 25px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #1976d2;
+        }
+
+        h3 {
+            color: #1976d2;
+            font-size: 18px;
+            margin: 15px 0 8px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .kotak-petunjuk {
+            background-color: #e8f0fe;
+            border-left: 5px solid #1976d2;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .nomor-soal {
+            font-weight: bold;
+            color: #1976d2;
+            font-size: 17px;
+        }
+
+        .soal {
+            background-color: #f9fafc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 18px 0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            border-top: 3px solid #1976d2;
+        }
+
+        .pilihan-jawaban {
+            margin: 12px 0 12px 25px;
+            line-height: 1.8;
+        }
+
+        .kotak-jawaban {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 12px;
+            display: none; /* Awalnya disembunyikan */
+        }
+
+        .tombol-jawaban {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 8px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .tombol-jawaban:hover {
+            background-color: #f57c00;
+            transform: scale(1.05);
+        }
+
+        .tombol-navigasi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button.navigasi {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        button.navigasi:hover {
+            background-color: #1565c0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button.navigasi:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .tombol-navigasi {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Bab 5: Latihan Soal Penilaian</h1>
+
+        <div class="kotak-petunjuk">
+            <h3>📌 Petunjuk Pengerjaan</h3>
+            <p>Berikut adalah soal latihan untuk menguji pemahamanmu tentang materi Teks Aural Non Fiksi. Terdiri dari soal pilihan ganda dan soal uraian. Kerjakanlah dengan teliti, lalu tekan tombol <strong>"Lihat Kunci Jawaban"</strong> untuk memeriksa jawabanmu.</p>
+        </div>
+
+
+        <h2>A. Soal Pilihan Ganda</h2>
+
+        <!-- Soal 1 -->
+        <div class="soal">
+            <p><span class="nomor-soal">1.</span> Teks aural non fiksi adalah teks yang isinya berupa ....</p>
+            <div class="pilihan-jawaban">
+                <p>A. Kisah khayalan dan imajinasi pengarang</p>
+                <p>B. Cerita dongeng dan legenda masyarakat</p>
+                <p>C. Fakta, informasi nyata, dan kejadian sebenarnya</p>
+                <p>D. Rekaan cerita yang dikembangkan menjadi film</p>
+            </div>
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban1')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban1">
+                <strong>Jawaban: C</strong><br>
+                <em>Penjelasan:</em> Teks aural non fiksi memuat hal-hal yang benar-benar terjadi, fakta nyata, atau informasi yang sahih, bukan hasil imajinasi.
+            </div>
+        </div>
+
+
+        <!-- Soal 2 -->
+        <div class="soal">
+            <p><span class="nomor-soal">2.</span> Berikut ini yang <strong>bukan</strong> merupakan ciri-ciri teks aural non fiksi adalah ....</p>
+            <div class="pilihan-jawaban">
+                <p>A. Menggunakan bahasa yang jelas dan mudah dipahami</p>
+                <p>B. Strukturnya terdiri atas pembukaan, isi, dan penutup</p>
+                <p>C. Isinya berupa rekayasa cerita yang menarik pendengar</p>
+                <p>D. Disampaikan dengan intonasi dan penekanan makna</p>
+            </div>
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban2')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban2">
+                <strong>Jawaban: C</strong><br>
+                <em>Penjelasan:</em> Isi yang berupa rekayasa cerita adalah ciri dari teks fiksi. Sedangkan teks non fiksi isinya nyata dan faktual.
+            </div>
+        </div>
+
+
+        <!-- Soal 3 -->
+        <div class="soal">
+            <p><span class="nomor-soal">3.</span> Bagian dalam struktur teks aural yang berfungsi untuk menarik perhatian pendengar dan menyampaikan tujuan pembicaraan terdapat pada bagian ....</p>
+            <div class="pilihan-jawaban">
+                <p>A. Pembukaan</p>
+                <p>B. Isi</p>
+                <p>C. Penutup</p>
+                <p>D. Kesimpulan</p>
+            </div>
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban3')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban3">
+                <strong>Jawaban: A</strong><br>
+                <em>Penjelasan:</em> Bagian pembukaan berisi sapaan, pengantar topik, dan tujuan utama untuk menarik perhatian pendengar.
+            </div>
+        </div>
+
+
+        <!-- Soal 4 -->
+        <div class="soal">
+            <p><span class="nomor-soal">4.</span> Jenis teks aural non fiksi yang berisi laporan tentang peristiwa atau kejadian baru yang benar-benar terjadi disebut ....</p>
+            <div class="pilihan-jawaban">
+                <p>A. Pidato</p>
+                <p>B. Berita</p>
+                <p>C. Instruksi</p>
+                <p>D. Wawancara</p>
+            </div>
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban4')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban4">
+                <strong>Jawaban: B</strong><br>
+                <em>Penjelasan:</em> Berita adalah teks yang berisi laporan mengenai peristiwa atau kejadian terbaru yang benar-benar terjadi di lingkungan sekitar maupun di tempat lain.
+            </div>
+        </div>
+
+
+        <!-- Soal 5 -->
+        <div class="soal">
+            <p><span class="nomor-soal">5.</span> Penggunaan intonasi, nada bicara, dan jeda yang tepat dalam teks aural bertujuan agar ....</p>
+            <div class="pilihan-jawaban">
+                <p>A. Pendengar merasa terhibur dan senang mendengarkan</p>
+                <p>B. Suara pembicara terdengar lantang dan bergema</p>
+                <p>C. Informasi mudah dipahami dan maknanya jelas</p>
+                <p>D. Teks yang disampaikan terlihat lebih indah bahasanya</p>
+            </div>
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban5')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban5">
+                <strong>Jawaban: C</strong><br>
+                <em>Penjelasan:</em> Intonasi, nada, dan jeda digunakan untuk memberikan penekanan pada bagian penting, sehingga informasi yang disampaikan mudah dipahami oleh pendengar.
+            </div>
+        </div>
+
+
+        <h2>B. Soal Uraian</h2>
+
+        <!-- Soal 6 -->
+        <div class="soal">
+            <p><span class="nomor-soal">6.</span> Jelaskan apa yang dimaksud dengan teks aural non fiksi dan sebutkan 3 contohnya!</p>
+            
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban6')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban6">
+                <strong>Jawaban:</strong><br>
+                Teks aural non fiksi adalah teks yang disampaikan secara lisan atau suara, yang isinya berupa fakta, informasi nyata, atau kejadian yang benar-benar terjadi. Teks ini berisi keterangan yang sahih dan bukan hasil imajinasi pengarangnya.<br>
+                <strong>Contohnya:</strong> Berita, pidato, penjelasan/instruksi, laporan kegiatan, dan wawancara. (Pilih 3 saja)
+            </div>
+        </div>
+
+
+        <!-- Soal 7 -->
+        <div class="soal">
+            <p><span class="nomor-soal">7.</span> Sebutkan dan jelaskan secara singkat tiga bagian struktur penyusun teks aural non fiksi!</p>
+            
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban7')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban7">
+                <strong>Jawaban:</strong><br>
+                <ol>
+                    <li><strong>Bagian Pembukaan:</strong> Bagian awal yang berisi sapaan, pengantar topik, dan tujuan penyampaian informasi untuk menarik perhatian pendengar.</li>
+                    <li><strong>Bagian Isi:</strong> Bagian inti yang berisi informasi utama, fakta, penjelasan rinci, atau gagasan yang ingin disampaikan secara runtut dan jelas.</li>
+                    <li><strong>Bagian Penutup:</strong> Bagian akhir yang berisi kesimpulan, pesan, harapan, ucapan terima kasih, dan salam penutup untuk mengakhiri penyampaian.</li>
+                </ol>
+            </div>
+        </div>
+
+
+        <!-- Soal 8 -->
+        <div class="soal">
+            <p><span class="nomor-soal">8.</span> Mengapa dalam penyampaian teks aural kita harus menggunakan bahasa yang jelas, baku, dan mudah dipahami?</p>
+            
+            <button class="tombol-jawaban" onclick="lihatJawaban('jawaban8')">🔍 Lihat Kunci Jawaban</button>
+            <div class="kotak-jawaban" id="jawaban8">
+                <strong>Jawaban:</strong><br>
+                Karena teks aural disampaikan melalui suara dan hanya dapat didengar satu kali oleh pendengar. Jika bahasanya rumit, tidak jelas, atau menggunakan bahasa yang tidak umum, maka pendengar akan kesulitan menangkap maknanya. Oleh karena itu, bahasa yang jelas dan baku diperlukan agar informasi dapat diterima dan dipahami dengan benar oleh pendengar.
+            </div>
+        </div>
+
+
+        <!-- TOMBOL NAVIGASI HALAMAN -->
+        <div class="tombol-navigasi">
+            <button class="navigasi" id="btnKembali">« Sebelumnya</button>
+            <button class="navigasi" id="btnLanjut">Selanjutnya »</button>
+        </div>
+
+    </div>
+
+    <!-- Berkas Suara -->
+    <audio id="suaraKlik" src="klik.mp3" preload="auto">
+
+    <script>
+        // Ambil elemen
+        const tombolKembali = document.getElementById('btnKembali');
+        const tombolLanjut = document.getElementById('btnLanjut');
+        const suaraKlik = document.getElementById('suaraKlik');
+
+
+        // Fungsi Navigasi Halaman
+                // Fungsi Navigasi Halaman
+        function pindahHalaman(tujuan) {
+            suaraKlik.currentTime = 0;
+            suaraKlik.play()
+                .then(() => {
+                    setTimeout(() => {
+                        window.location.href = tujuan;
+                    }, 400);
+                })
+                .catch(() => {
+                    window.location.href = tujuan;
+                });
+        }
+
+        // Fungsi Lihat Kunci Jawaban
+        function lihatJawaban(idJawaban) {
+            const kotakJawaban = document.getElementById(idJawaban);
+            
+            // Ubah tampilan: jika tersembunyi maka ditampilkan, jika sudah tampil maka disembunyikan
+            if (kotakJawaban.style.display === "block") {
+                kotakJawaban.style.display = "none";
+            } else {
+                kotakJawaban.style.display = "block";
+            }
+        }
+
+        // Event Tombol Navigasi
+        tombolKembali.addEventListener('click', () => {
+            pindahHalaman('halaman6.html'); // Kembali ke Halaman Sebelumnya
+        });
+
+        tombolLanjut.addEventListener('click', () => {
+    pindahHalaman('halaman8.html'); // Menuju Halaman Penutup
+});
+
+    </script>
+
+</body>
+</html>

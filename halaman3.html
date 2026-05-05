@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 1: Pengertian & Konsep Dasar - E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(25, 118, 210, 0.85), rgba(25, 118, 210, 0.85)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .kontainer {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.96);
+            color: #333;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: muncul 1s ease forwards;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1976d2;
+        }
+
+        h2 {
+            color: #1565c0;
+            font-size: 22px;
+            margin: 25px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #1976d2;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 10px 0 15px 25px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .kotak-penjelasan {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #1976d2;
+        }
+
+        .kotak-perbandingan {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .kolom {
+            background-color: #f5f5f5;
+            padding: 18px;
+            border-radius: 8px;
+            border-top: 4px solid #1976d2;
+        }
+
+        .kolom h3 {
+            text-align: center;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .tombol-suara {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 8px 0;
+        }
+
+        .tombol-suara:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        .tombol-navigasi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 700px) {
+            .kotak-perbandingan {
+                grid-template-columns: 1fr;
+            }
+            .tombol-navigasi {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Bab 1: Pengertian & Konsep Dasar</h1>
+
+        <h2>1.1 Apa Itu Teks Non Fiksi?</h2>
+        
+        <div class="kotak-penjelasan">
+            <p><strong>Pengertian:</strong><br>
+            Teks non fiksi adalah teks yang berisi uraian atau paparan tentang sesuatu yang benar-benar ada atau nyata, berdasarkan fakta, kejadian sebenarnya, atau ilmu pengetahuan. Teks ini tidak berisi khayalan, rekayasa, atau karangan pengarangnya semata.</p>
+        </div>
+
+        <p><strong>Ciri-ciri utama teks non fiksi:</strong></p>
+        <ul>
+            <li>Isinya berdasarkan fakta atau kenyataan yang benar-benar terjadi</li>
+            <li>Mengandung informasi, pengetahuan, atau penjelasan</li>
+            <li>Bahasa yang digunakan bersifat objektif dan jelas</li>
+            <li>Memberikan manfaat berupa pengetahuan atau wawasan bagi pembaca/pendengar</li>
+        </ul>
+
+        <p><strong>Contoh dalam kehidupan sehari-hari:</strong> Berita di televisi/radio, artikel ilmiah, buku pelajaran, laporan kegiatan, biografi tokoh, dan panduan cara melakukan sesuatu.</p>
+
+        <button class="tombol-suara" id="suara1">🔊 Dengarkan Penjelasan</button>
+
+
+        <h2>1.2 Apa Itu Teks Aural?</h2>
+
+        <div class="kotak-penjelasan">
+            <p><strong>Pengertian:</strong><br>
+            Teks aural adalah teks yang disampaikan melalui jalur pendengaran atau suara. Teks ini diproses dan dipahami oleh pendengar melalui suara yang diucapkan, bukan melalui tulisan yang dibaca langsung oleh mata.</p>
+        </div>
+
+        <p><strong>Ciri khas teks aural:</strong></p>
+        <ul>
+            <li>Disampaikan dalam bentuk suara atau ucapan lisan</li>
+            <li>Pemahamannya bergantung pada kemampuan mendengar dan menyimak</li>
+            <li>Menggunakan unsur nada, intonasi, jeda, dan penekanan untuk memperjelas makna</li>
+            <li>Bersifat sementara, artinya hanya ada saat disampaikan (kecuali direkam)</li>
+        </ul>
+
+        <div class="kotak-perbandingan">
+            <div class="kolom">
+                <h3>Teks Tulis</h3>
+                <ul>
+                    <li>Dibaca menggunakan mata</li>
+                    <li>Bisa dibaca berulang-ulang</li>
+                    <li>Informasi tetap ada dalam tulisan</li>
+                    <li>Tanda baca membantu memahami makna</li>
+                </ul>
+            </div>
+            <div class="kolom">
+                <h3>Teks Aural</h3>
+                <ul>
+                    <li>Didengar menggunakan telinga</li>
+                    <li>Hanya terdengar saat disampaikan</li>
+                    <li>Informasi disimpan dalam ingatan</li>
+                    <li>Intonasi dan nada membantu memahami makna</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="tombol-suara" id="suara2">🔊 Dengarkan Penjelasan</button>
+
+
+        <h2>1.3 Hubungan Teks Non Fiksi dan Teks Aural</h2>
+
+        <p>Teks non fiksi sangat sering disampaikan dalam bentuk teks aural dalam kehidupan sehari-hari. Mengapa demikian? Karena informasi atau fakta sering kali lebih cepat dan mudah disampaikan secara lisan kepada banyak orang.</p>
+
+        <p><strong>Alasan teks non fiksi sering berbentuk aural:</strong></p>
+        <ul>
+            <li>Agar informasi cepat tersebar kepada banyak orang</li>
+            <li>Lebih mudah dipahami karena disampaikan dengan penekanan dan intonasi yang jelas</li>
+            <li>Bisa langsung dijelaskan atau dijawab jika ada yang belum dimengerti</li>
+            <li>Cocok untuk penyampaian berita, pengumuman, atau instruksi</li>
+        </ul>
+
+        <p><strong>Contoh penerapannya:</strong> Pembacaan berita di radio, penjelasan guru di kelas, pidato kenegaraan, siaran pengumuman di sekolah, atau laporan lisan dalam rapat.</p>
+
+        <button class="tombol-suara" id="suara3">🔊 Dengarkan Penjelasan</button>
+
+
+        <div class="tombol-navigasi">
+            <button id="btnKembali">« Sebelumnya</button>
+            <button id="btnLanjut">Selanjutnya »</button>
+        </div>
+    </div>
+
+    <!-- Berkas Suara -->
+    <audio id="suaraKlik" src="klik.mp3" preload="auto">
+    <audio id="audio1" src="penjelasan1.mp3" preload="auto">
+    <audio id="audio2" src="penjelasan2.mp3" preload="auto">
+    <audio id="audio3" src="penjelasan3.mp3" preload="auto">
+
+    <script>
+        // Ambil elemen
+        const tombolKembali = document.getElementById('btnKembali');
+        const tombolLanjut = document.getElementById('btnLanjut');
+        const suaraKlik = document.getElementById('suaraKlik');
+        
+        const btnSuara1 = document.getElementById('suara1');
+        const btnSuara2 = document.getElementById('suara2');
+        const btnSuara3 = document.getElementById('suara3');
+        
+        const audio1 = document.getElementById('audio1');
+        const audio2 = document.getElementById('audio2');
+        const audio3 = document.getElementById('audio3');
+
+        // Fungsi navigasi halaman
+        function pindahHalaman(tujuan) {
+            suaraKlik.currentTime = 0;
+            suaraKlik.play()
+                .then(() => {
+                    setTimeout(() => {
+                        window.location.href = tujuan;
+                    }, 400);
+                })
+                .catch(() => {
+                    window.location.href = tujuan;
+                });
+        }
+
+        // Fungsi putar suara penjelasan
+        function putarAudio(audioElemen) {
+            // Hentikan semua suara lain dulu
+            audio1.pause(); audio1.currentTime = 0;
+            audio2.pause(); audio2.currentTime = 0;
+            audio3.pause(); audio3.currentTime = 0;
+
+            // Putar suara yang dipilih
+            audioElemen.currentTime = 0;
+            audioElemen.play()
+                .catch(err => {
+                    alert("Maaf, suara tidak dapat diputar. Pastikan berkas suaranya sudah tersedia!");
+                });
+        }
+
+        // Event tombol navigasi
+        tombolKembali.addEventListener('click', () => {
+            pindahHalaman('halaman2.html');
+        });
+
+        tombolLanjut.addEventListener('click', () => {
+            pindahHalaman('halaman4.html'); // Menuju Bab 2
+        });
+
+        // Event tombol suara penjelasan
+        btnSuara1.addEventListener('click', () => putarAudio(audio1));
+        btnSuara2.addEventListener('click', () => putarAudio(audio2));
+        btnSuara3.addEventListener('click', () => putarAudio(audio3));
+    </script>
+</body>
+</html>

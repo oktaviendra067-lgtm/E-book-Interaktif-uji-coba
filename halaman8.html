@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penutup - E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(25, 118, 210, 0.85), rgba(25, 118, 210, 0.85)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kontainer {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.96);
+            color: #333;
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: muncul 1s ease forwards;
+            text-align: center;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ikon {
+            font-size: 70px;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #1976d2;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #e3f2fd;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .pesan-khusus {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .pesan-khusus p {
+            text-align: center;
+            font-weight: 500;
+            color: #2e7d32;
+            font-size: 17px;
+        }
+
+        .tanda-tangan {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #ccc;
+            font-style: italic;
+            color: #555;
+        }
+
+        .tombol-navigasi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button.navigasi {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        button.navigasi:hover {
+            background-color: #1565c0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button.navigasi:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .tombol-navigasi {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .kontainer {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+
+        <div class="ikon">🎉</div>
+        
+        <h1>Terima Kasih & Selamat!</h1>
+
+        <p>Selamat ya! Kamu telah berhasil menyelesaikan seluruh rangkaian pembelajaran dan latihan soal mengenai materi <strong>Teks Aural Non Fiksi</strong> dari awal sampai akhir. Semoga materi yang telah kamu pelajari dapat menambah wawasan dan pengetahuanmu dalam memahami, mengidentifikasi, maupun menyusun teks aural dengan baik dan benar.</p>
+
+        <p>Ingatlah selalu bahwa mempelajari bahasa Indonesia sangat penting karena bahasa adalah alat komunikasi utama kita sehari-hari. Dengan memahami struktur, unsur kebahasaan, dan jenis-jenis teks, kemampuan berbicara dan mendengarkanmu akan semakin terasah dan berkembang.</p>
+
+
+        <div class="pesan-khusus">
+            <p>"Teruslah belajar, membaca, dan berlatih. Karena ilmu yang bermanfaat adalah bekal terbaik untuk masa depanmu nanti."</p>
+        </div>
+
+
+        <p>Apabila masih ada hal yang belum dipahami atau ingin dibaca ulang, jangan ragu untuk kembali ke halaman-halaman materi sebelumnya. E-book ini disusun agar dapat dipelajari kapan saja dan di mana saja.</p>
+
+        <p>Sekian dari kami, semoga sukses selalu menyertai langkahmu dalam menuntut ilmu. Sampai jumpa pada materi pembelajaran berikutnya!</p>
+
+
+        <div class="tanda-tangan">
+            <p>Salam Hangat,<br>
+            Penyusun Materi</p>
+        </div>
+
+
+        <!-- TOMBOL NAVIGASI HALAMAN -->
+        <div class="tombol-navigasi">
+            <button class="navigasi" id="btnKembali">« Sebelumnya</button>
+            <button class="navigasi" id="btnUtama">Kembali ke Halaman Utama</button>
+        </div>
+
+    </div>
+
+    <!-- Berkas Suara -->
+    <audio id="suaraKlik" src="klik.mp3" preload="auto">
+
+    <script>
+        // Ambil elemen
+        const tombolKembali = document.getElementById('btnKembali');
+        const tombolUtama = document.getElementById('btnUtama');
+        const suaraKlik = document.getElementById('suaraKlik');
+
+
+        // Fungsi Navigasi Halaman
+        function pindahHalaman(tujuan) {
+            suaraKlik.currentTime = 0;
+            suaraKlik.play()
+                .then(() => {
+                    setTimeout(() => {
+                        window.location.href = tujuan;
+                    }, 400);
+                })
+                .catch(() => {
+                    window.location.href = tujuan;
+                });
+        }
+
+        // Event Tombol Navigasi
+        tombolKembali.addEventListener('click', () => {
+            pindahHalaman('halaman7.html'); // Kembali ke halaman latihan soal
+        });
+
+        tombolUtama.addEventListener('click', () => {
+            pindahHalaman('index.html'); // Kembali ke halaman utama / daftar isi
+        });
+
+    </script>
+
+</body>
+</html>

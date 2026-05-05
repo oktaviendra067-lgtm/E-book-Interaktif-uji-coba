@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identitas & Pengantar - E-Book Interaktif</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: 
+                linear-gradient(rgba(25, 118, 210, 0.85), rgba(25, 118, 210, 0.85)),
+                url("gambar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .kontainer {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: muncul 1s ease forwards;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 28px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1976d2;
+        }
+
+        h2 {
+            color: #1565c0;
+            font-size: 22px;
+            margin: 25px 0 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 10px 0 15px 25px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .identitas {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #1976d2;
+        }
+
+        .identitas p {
+            margin: 5px 0;
+        }
+
+        .tombol-navigasi {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            .tombol-navigasi {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Identitas & Pengantar</h1>
+
+        <div class="identitas">
+            <p><strong>Judul:</strong> E-Book Interaktif Pembelajaran Bahasa Indonesia</p>
+            <p><strong>Kelas:</strong> V (Lima) SD</p>
+            <p><strong>Materi:</strong> Teks Non Fiksi Berbentuk Teks Aural</p>
+            <p><strong>Teknologi:</strong> HTML5, CSS3, JavaScript</p>
+        </div>
+
+        <h2>Kata Pengantar</h2>
+        <p>Assalamualaikum warahmatullahi wabarakatuh,</p>
+        <p>Halo teman-teman kelas V SD! Apa kabar? Semoga kalian selalu sehat dan bersemangat dalam belajar ya.</p>
+        <p>Selamat datang di E-Book Interaktif Bahasa Indonesia. E-book ini disusun khusus untuk membantu teman-teman mempelajari materi tentang <strong>Teks Non Fiksi Berbentuk Teks Aural</strong> dengan cara yang menyenangkan, menarik, dan mudah dipahami.</p>
+        <p>Di dalam e-book ini, kalian akan menemukan penjelasan materi, contoh-contoh nyata, rekaman suara, serta latihan soal yang seru. Kalian bisa belajar kapan saja dan di mana saja sesuai keinginan kalian.</p>
+        <p>Selamat belajar, semoga berhasil dan paham materinya dengan baik ya!</p>
+
+        <h2>Tujuan Pembelajaran</h2>
+        <p>Setelah mempelajari materi dalam e-book ini, diharapkan teman-teman mampu:</p>
+        <ul>
+            <li>Menjelaskan pengertian teks non fiksi dan teks aural</li>
+            <li>Menyebutkan ciri-ciri dan jenis-jenis teks aural non fiksi</li>
+            <li>Mengetahui struktur penyusun teks aural non fiksi</li>
+            <li>Menganalisis contoh teks aural non fiksi dengan tepat</li>
+            <li>Mengerjakan soal latihan pemahaman dengan benar</li>
+        </ul>
+
+        <h2>Petunjuk Penggunaan</h2>
+        <p>Agar kalian nyaman dan mudah menggunakan e-book ini, perhatikan petunjuk berikut:</p>
+        <ul>
+            <li>Gunakan tombol <strong>« Kembali ke Sampul</strong> untuk kembali ke halaman awal</li>
+            <li>Gunakan tombol <strong>Lanjut ke Materi »</strong> untuk masuk ke bab pembahasan</li>
+            <li>Tekan tombol yang memiliki gambar speaker untuk mendengarkan rekaman suara</li>
+            <li>Jawab soal latihan dengan memilih jawaban yang menurutmu paling benar</li>
+            <li>Bacalah materi dengan saksama dan dengarkan rekaman suara sampai selesai</li>
+        </ul>
+
+        <div class="tombol-navigasi">
+            <button id="btnKembali">« Kembali ke Sampul</button>
+            <button id="btnLanjut">Lanjut ke Materi »</button>
+        </div>
+    </div>
+
+    <!-- Suara saat tombol ditekan -->
+    <audio id="suaraKlik" src="klik.mp3" preload="auto">
+
+    <script>
+        // Ambil elemen tombol dan suara
+        const tombolKembali = document.getElementById('btnKembali');
+        const tombolLanjut = document.getElementById('btnLanjut');
+        const suara = document.getElementById('suaraKlik');
+
+        // Fungsi memutar suara dan pindah halaman
+        function jalankanNavigasi(tujuan) {
+            suara.currentTime = 0;
+            suara.play()
+                .then(() => {
+                    setTimeout(() => {
+                        window.location.href = tujuan;
+                    }, 400);
+                })
+                .catch(() => {
+                    window.location.href = tujuan;
+                });
+        }
+
+        // Tombol kembali ke halaman sampul
+        tombolKembali.addEventListener('click', () => {
+            jalankanNavigasi('index.html');
+        });
+
+        // Tombol lanjut ke halaman materi (Bab 1)
+        tombolLanjut.addEventListener('click', () => {
+            jalankanNavigasi('halaman3.html');
+        });
+    </script>
+</body>
+</html>
